@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { Platform } from 'react-native'; // в зависимости от платформы менять стили
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { MainScreen } from './src/screens/MainScreen';
@@ -17,9 +17,12 @@ function App() {
         // стили по умолчанию
         screenOptions={{
           headerStyle: {
-            backgroundColor: THEME.MAIN_COLOR,
+            // если android - theme.main_color, иначе белый
+            backgroundColor:
+              Platform.OS === 'android' ? THEME.MAIN_COLOR : '#fff',
           },
-          headerTintColor: '#fff',
+          headerTintColor:
+            Platform.OS === 'android' ? '#fff' : THEME.MAIN_COLOR,
         }}
       >
         <Stack.Screen
