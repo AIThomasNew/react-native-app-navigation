@@ -1,10 +1,12 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-export const PostScreen = ({}) => {
+export const PostScreen = (props) => {
+  // const postId = props.navigation.navigate('postId');
+
   return (
     <View style={styles.center}>
-      <Text>Post Screen</Text>
+      <Text>POST</Text>
     </View>
   );
 };

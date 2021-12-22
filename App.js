@@ -33,7 +33,7 @@ function App() {
         <Stack.Screen
           name="Post"
           component={PostScreen}
-          options={{ title: 'My post' }}
+          options={{ title: 'Пост' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
