@@ -1,18 +1,22 @@
 import * as React from 'react';
-import { Platform } from 'react-native'; // в зависимости от платформы менять стили
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Platform } from 'react-native'; // в завис. от платф. изм. стили
+
+// Screens
 import { MainScreen } from './src/screens/MainScreen';
 import { PostScreen } from './src/screens/PostScreen';
+
+// Default Styles
 import { THEME } from './src/theme';
 
+// Functional
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        // по умолчанию первый
         initialRouteName="Main"
         // стили по умолчанию
         screenOptions={{
@@ -28,12 +32,13 @@ function App() {
         <Stack.Screen
           name="Main"
           component={MainScreen}
-          options={{ title: 'My home' }}
+          options={{ title: 'Основная страница' }}
         />
         <Stack.Screen
           name="Post"
           component={PostScreen}
           options={{ title: 'Пост' }}
+          // getId={({ params }) => params.postId}
         />
       </Stack.Navigator>
     </NavigationContainer>
