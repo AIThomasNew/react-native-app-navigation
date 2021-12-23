@@ -35,5 +35,3 @@ export const DATA = [
     booked: false,
   },
 ];
-
-console.log(DATA);

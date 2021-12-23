@@ -13,7 +13,7 @@ import { THEME } from './src/theme';
 // Functional
 const Stack = createNativeStackNavigator();
 
-function App() {
+function App(props) {
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -37,7 +37,7 @@ function App() {
         <Stack.Screen
           name="Post"
           component={PostScreen}
-          options={{ title: 'Пост' }}
+          options={{ title: 'Посты' }}
           // getId={({ params }) => params.postId}
         />
       </Stack.Navigator>
