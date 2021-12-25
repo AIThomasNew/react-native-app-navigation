@@ -2,15 +2,10 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Platform } from 'react-native'; // в завис. от платф. изм. стили
-
-// Screens
 import { MainScreen } from './src/screens/MainScreen';
 import { PostScreen } from './src/screens/PostScreen';
-
-// Default Styles
 import { THEME } from './src/theme';
 
-// Functional
 const Stack = createNativeStackNavigator();
 
 function App(props) {
@@ -32,7 +27,7 @@ function App(props) {
         <Stack.Screen
           name="Main"
           component={MainScreen}
-          options={{ title: 'Основная страница' }}
+          options={{ title: 'Мой блог' }}
         />
         <Stack.Screen
           name="Post"
@@ -46,6 +41,12 @@ function App(props) {
 }
 
 export default App;
+
+////////////////
+
+// screenOptions={{ headerShown: true }} - не видимый header 
+
+////////////////
 
 // import React from 'react';
 // import { View, StyleSheet, Text } from 'react-native';
